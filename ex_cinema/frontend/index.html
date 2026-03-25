@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX — Кинотеатр</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🎬 Кинотеатр</h1>
+
+  <div class="grid">
+    <!-- ===== ФИЛЬМЫ (готово) ===== -->
+    <section>
+      <h2>Фильмы</h2>
+
+      <form id="movie-form">
+        <input id="movie-title" type="text" placeholder="Название" required />
+        <input id="movie-genre" type="text" placeholder="Жанр" required />
+        <input id="movie-year"  type="number" placeholder="Год" min="1900" max="2030" required />
+        <button type="submit">Добавить</button>
+      </form>
+
+      <ul id="movie-list"></ul>
+    </section>
+
+    <!-- ===== СЕАНСЫ (задание) ===== -->
+    <section>
+      <h2>Сеансы</h2>
+
+      <p class="hint">⚠️ Реализуй роутер сеансов на бэкенде, форму и логику на фронте!</p>
+
+        <form id="session-form">
+          <select id="session-movie">
+            <option value="">Выбери фильм...</option>
+          </select>
+          <input id="session-time"  type="text"   placeholder="Время (напр. 18:00)" required />
+          <input id="session-price" type="number"  placeholder="Цена" min="1" required />
+          <input id="session-seats" type="number"  placeholder="Мест" min="1" required />
+          <button type="submit">Добавить сеанс</button>
+        </form>
+
+      <!-- Фильтр по фильму -->
+      <div class="filter">
+        <label>Фильтр:</label>
+        <select id="filter-movie">
+          <option value="">Все сеансы</option>
+        </select>
+      </div>
+
+      <div id="session-list" class="session-list"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

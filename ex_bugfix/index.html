@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Генератор команд</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>⚡ Генератор команд</h1>
+
+  <div class="app">
+    <!-- Добавление участников -->
+    <section class="panel">
+      <h2>Участники (<span id="count">0</span>)</h2>
+      <form id="add-form">
+        <input id="name-input" type="text" placeholder="Имя участника" required />
+        <button type="submit">Добавить</button>
+      </form>
+      <ul id="players-list"></ul>
+    </section>
+
+    <!-- Таймер -->
+    <section class="panel">
+      <h2>⏱ Таймер</h2>
+      <div class="timer-display" id="timer-display">00:30</div>
+      <div class="timer-controls">
+        <button id="start-btn">Старт</button>
+        <button id="stop-btn">Стоп</button>
+        <button id="reset-btn">Сброс</button>
+      </div>
+    </section>
+
+    <!-- Генерация команд -->
+    <section class="panel">
+      <h2>🎲 Команды</h2>
+      <label>
+        Размер команды:
+        <input id="team-size" type="number" min="2" max="10" value="2" />
+      </label>
+      <button id="generate-btn">Сгенерировать</button>
+      <div id="teams-output"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
