@@ -24,7 +24,7 @@ const countSpan   = document.getElementById("count");
 addForm.addEventListener("submit", (e) => {
   e.preventDefault();
   
-  // добавлил trim для удаления пробелов
+  // добавлил trim 
   const name = nameInput.value.trim();  
 
   if (name === "") return;       
